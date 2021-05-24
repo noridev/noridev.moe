@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montez&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 
 * {
     margin: 0;
@@ -19,9 +20,116 @@ body {
     font-size: 3.2vh;
     color: #f6e58d;
 
+
     background-color: #2d3436;
 
     overflow-x: hidden;
+}
+
+#fullscreen {
+    position: relative;
+    height:100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    clear: both;
+    content: "";
+}
+
+#whoami {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+
+  font-size: 5vh;
+
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #f6e58d; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+
+}
+
+#contactme {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #f6e58d; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    blink-caret .75s step-end infinite;
+
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #f6e58d; }
+}
+
+#box1 {
+    height:100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    clear: both;
+    content: "";
+}
+
+#test {
+    height: 1px;
+
+}
+
+#tags {
+    font-weight: 400;
+    font-size: 2vh;
+
+    color: #FFF;
+
+}
+
+x-sign {
+    --interval: 1s;
+    display: block;
+    text-shadow: 
+      0 0 10px var(--color1),
+      0 0 20px var(--color2),
+      0 0 40px var(--color3),
+      0 0 80px var(--color4);
+    will-change: filter, color;
+    filter: saturate(60%);
+    animation: flicker steps(100) var(--interval) 1s infinite;
+
+    font-family: 'Montez', sans-serif;
+    font-weight: 800;
+    font-size: 50vh;
+
+
+    color: rgb(246, 229, 141);
+    --color1: rgb(246, 229, 141);
+    --color2: rgb(246, 229, 141);
+    --color3: rgb(246, 229, 141);
+    --color4: rgb(246, 229, 141);
+}
+  
+@keyframes flicker {
+    50% {
+      color: white;
+      filter: saturate(200%);
+    }
 }
 
 #geshi {
@@ -37,186 +145,14 @@ body {
     overflow-x: hidden;
 }
 
-.terminal-body {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: table;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 1.2vw;
-    background: #2d3436 !important;
-    color: #f6e58d;
-}
-
-.container {
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.terminal a {
-    color: inherit;
-}
-
-.terminal a:visited {
-    color: inherit;
-}
-
-/* */
-.background {
-    position:absolute;
-    top:0;
-    left:0;
-    min-width: 100%;
-    height: 100%;
-    -webkit-filter: blur(5px);
-    filter: blur(5px);
-    transition: filter 600ms, -webkit-filter 600ms;
-}
-.background2 {
-    position:absolute;
-    top:0;
-    left:0;
-    min-width: 100%;
-    height: 100%;
-}
-
-/* */
-.page {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
-
-.screen-2 {
-    position: relative;
-    background-color: #2d3436;
-    color: #ecf0f1;
-}
-
-.box {
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    position:absolute;
-    text-align:center;
-}
-.box2 {
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    position:absolute;
-    text-align:center;
-}
 
 h2 {
     font-weight: 500;
 }
 
-.social-container {
-    font-family: "font awesome 5 brands";
-    font-size: 1.2em;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    display: block;
-    margin-block-start: 0.33em;
-    margin-block-end: 0.33em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-
-.icon {
-    cursor:pointer;
-    margin-left:1.5vh;
-}
-
-.icon:hover:before {
-	animation: in .8s ease-in-out normal;
-}
-
-@keyframes in {
-	from {transform: rotate(0deg);}
-	to {transform: rotate(360deg);}
-}
-
-@keyframes out {
-	from {transform: rotate(360deg);}
-	to {transform: rotate(0deg);}
-}
-
-.icon::before {
-    display:inline-block;
-	animation: out .8s ease-in-out normal;
-}
-
-.twitter::before {
-    content: "\f099";
-}
-
-.github::before {
-    content: "\f113";
-}
-
-.discord::before {
-    content: "\f392";
-}
-
-.files::before {
-    content: "\f1c9";
-}
-
-
-.command {
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 600;
-}
-
-.content {
-    text-align: left;
-}
-
-#adjectives {
-    border-right: solid 2px #2d3436;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: animated-cursor 600ms steps(29,end) infinite;
-}
-#adjectives2 {
-    border-right: solid 2px #2d3436;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: animated-cursor 600ms steps(29,end) infinite;
-}
-
 @keyframes animated-cursor {
     from{border-right-color: #2d3436;}
     to{border-right-color: transparent;}
-}
-
-#command-cursor {
-    text-decoration: underline;
-    color: inherit;
-    animation: animated-cursor-2 600ms steps(30,end) infinite;
-}
-
-@keyframes animated-cursor-2 {
-    from{color: inherit;}
-    to{color: transparent;}
-}
-
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #b61924;
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
 }
 
 .arrow {
@@ -244,6 +180,181 @@ h2 {
   }
 }
 
-.fillowo path {
-    fill: wheat;
-  }
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color: #bbb5af;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color: #bbb5af;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::placeholder, textarea::focus:placeholder {
+  color: #bbb5af;
+}
+
+input::-ms-placeholder, textarea::-ms-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
+  color: #bbb5af;
+}
+
+/* on hover placeholder */
+
+input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
+  color: #cbc6c1;
+}
+
+#form {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  
+  background: transparent;
+  outline: none;
+  color: #f6e58d;
+  
+  border: solid 1px #f6e58d;
+  border-bottom: none;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: #f6e58d;
+  color: #f6e58d;
+}
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  
+  background: transparent;
+  outline: none;
+  
+  color: #726659;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  
+  border: solid 1px #f6e58d;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #f6e58d;
+  color: #f6e58d;
+}
+
+#submit {
+  width: 502px;
+  
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  color: #f6e58d;
+  
+  outline:none;
+  cursor: pointer;
+  
+  border: solid 1px #f6e58d;
+  border-top: none;
+}
+
+#submit:hover {
+  color: #f6e58d;
+}
