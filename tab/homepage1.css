@@ -1,0 +1,110 @@
+@font-face {
+    font-family:"CyberpunkWaifus";
+    src: url('/fonts/CyberpunkWaifus.woff');
+}
+
+.container {
+    padding: 10% 0;
+} 
+.titles {
+    margin: 18px;
+}
+
+.links {
+    text-align: center;
+    width: auto;
+    position: relative;
+    display: inline-block;
+}
+
+ul {
+    width: 75px;
+    list-style-type: none;
+    float: left;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+li {
+    text-align: left;
+}
+
+.child {
+    display: block;
+
+    border-style: solid;
+    border-width: 2px;
+
+    border-color: #000000;
+
+    margin: auto;
+    margin-bottom: 5px;
+    top: 25%;
+    width: 900px;
+
+/*  -webkit-backdrop-filter: blur(10px); */
+    -webkit-backdrop-filter: blur(10px) saturate(5%);
+}
+
+#main {
+    height: 300px;
+
+    background-image: url('mascots/mascot4.gif');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#searchbox {
+    height: 26;
+}
+
+#colors {
+    height: 20;
+}
+
+input {
+    font-size: 14px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+input[type=button] {
+    padding-top: 5px;
+}
+
+input.searchinput {
+    margin-top: 6px;
+    width: 55%;
+    border: none;
+}
+
+h1 {
+    -webkit-user-select: none;
+    user-select: none;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color:#000000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 15px;
+
+    background-color: #FFFFFF;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
