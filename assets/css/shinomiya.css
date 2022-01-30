@@ -101,6 +101,12 @@ html, body {
 	text-align: justify;
 }
 
+.footer {
+	position: absolute;
+	bottom: 0;
+	color: grey;
+}
+
 #overlay {
 	position: fixed;
 	display: none;
