@@ -198,14 +198,14 @@ html, body {
 	}
 
 	.headerDivider {
-		border-bottom:1px solid #808080; 
+		border-bottom:1px solid #808080;
 
      	margin-right: 0px;
 	}
 
 	.box {
 		width: 300px;
-		color: white;
+		/* color: white; */
 
 		display: flex;
 		margin-right: 0px;
